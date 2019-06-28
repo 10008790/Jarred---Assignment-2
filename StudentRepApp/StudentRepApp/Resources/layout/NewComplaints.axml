@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+	<LinearLayout
+		android:orientation="vertical"
+		android:minWidth="25px"
+		android:minHeight="25px"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:id="@+id/linearLayout1">
+		<include
+			layout="@layout/Header" />
+	</LinearLayout>
+	<TextView
+		android:text="New Complaints"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:minWidth="25px"
+		android:minHeight="25px"
+		android:id="@+id/textView1"
+		android:backgroundTint="#ff003f47" />
+	<EditText
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:id="@+id/textInputEditText1"
+		android:inputType="none"
+		android:hint="Enter complaint title here"
+		android:maxLines="1"
+		android:minLines="1"
+		android:singleLine="true"
+		android:lines="1" />
+
+	<ScrollView
+		android:minWidth="25px"
+		android:minHeight="25px"
+		android:layout_weight="0.9"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		
+		<EditText
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:id="@+id/complaintbody"
+			android:hint="Enter complaint here"
+			android:inputType="textMultiLine"
+			android:isScrollContainer="true"
+			android:verticalScrollbarPosition="right"
+			android:scrollIndicators="right"
+			android:minLines="10"
+			android:textIsSelectable="true"
+			android:editable="false"
+			android:elegantTextHeight="false"
+			android:gravity="top"
+			android:scrollbars="vertical"
+			android:maxLines="10"
+			android:singleLine="false"/>
+
+	</ScrollView>
+	<LinearLayout
+		android:orientation="vertical"
+		android:minWidth="25px"
+		android:minHeight="25px"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		<Button
+			android:text="Submit"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:id="@+id/submitcomplaint"
+			android:backgroundTint="#ff003f47"
+			android:textColor="#ffffffff"
+			android:onClick="submitclick"
+			android:layout_marginBottom="10px" />
+		<Button
+			android:text="Cancel"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:id="@+id/cancelcomplaint"
+			android:onClick="cancelclick"
+			android:backgroundTint="#ff003f47"
+			android:textColor="#ffffffff"/>
+	</LinearLayout>
+
+</LinearLayout>
